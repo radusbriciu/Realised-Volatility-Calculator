@@ -235,14 +235,12 @@ print(f"Execution time: {execution_time:.1f} seconds")
 # execution_time = end_time - start_time
 
 # print(f"Execution time: {execution_time:.1f} seconds")
-# Note:
 
+#                 Note:
 # The following cells will return an error if any of the below files are deleted or overwritten:
-
-# dataForGARCH.csv
-# JPM.csv
-# jpm1min_2006_2009.csv
-# Running 3.3. will require the user to conduct an ARMA(p,q)-GARCH(p,q) with the data generated in dataForGARCH.csv and store the conditional variance as 'CondV'
+#         dataForGARCH.csv
+#         JPM.csv
+#         jpm1min_2006_2009.csv
 
 htgarch = pd.read_csv(r"dataForGARCH.csv", index_col = 'datetime')
 htgarch['CondV'] = pd.to_numeric(htgarch['CondV'], errors='coerce')  # Convert values to numeric, coerce errors
