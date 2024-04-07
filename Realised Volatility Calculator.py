@@ -5,7 +5,8 @@ import matplotlib.pyplot as plt
 
 # USER INPUTS
 data_file = r"jpm1min_2006_2009.csv"
-identifyer = r'jpm1min.csv'
+identifyer = r"jpm1min.csv"
+one_day_close_prices = r"JPM.csv"
 
 script_start_time = time.time()
 
@@ -249,7 +250,7 @@ htgarch.index = pd.to_datetime(htgarch.index)  # Ensure index is datetime
 returns['close'] = pd.to_numeric(returns['close'], errors='coerce')  # Convert values to numeric, coerce errors
 returns.index = pd.to_datetime(returns.index)  # Ensure index is datetime
 
-oneday = pd.read_csv(r"JPM.csv", index_col="datetime")
+oneday = pd.read_csv(str(one_day_close_prices), index_col="datetime")
 oneday.index = pd.to_datetime(oneday.index, format='%d/%m/%Y %H:%M')
 oneday['close'] = pd.to_numeric(oneday['close'], errors='coerce')
 
