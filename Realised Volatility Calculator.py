@@ -237,7 +237,7 @@ print(f"Execution time: {execution_time:.1f} seconds")
 # print(f"Execution time: {execution_time:.1f} seconds")
 
 #                 Note:
-# The following cells will return an error if any of the below files are deleted or overwritten:
+# The remaining code will return an error if any of the below files are deleted or overwritten:
 #         dataForGARCH.csv
 #         JPM.csv
 #         jpm1min_2006_2009.csv
